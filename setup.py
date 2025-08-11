@@ -11,7 +11,9 @@ setup(
         "pandas",
         "numpy",
         "pyrodigal",
-        "biopython"
+        "biopython",
+        "tqdm",
+        "requests"
     ],
     entry_points={
         'console_scripts': [
