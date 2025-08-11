@@ -96,7 +96,7 @@ def get_predictions(model, tokenizer, sequence_df, batch_size=32, device=None):
     predicted_df = pd.DataFrame({
         'header': headers,
         'prediction': all_predictions,
-        'probability': all_probabilities
+        'confidance': all_probabilities
     })
     
     # Use vectorized apply for classification
