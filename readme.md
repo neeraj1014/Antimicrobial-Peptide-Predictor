@@ -256,11 +256,11 @@ This project is licensed under the Apache License 2.0 - see the LICENSE file for
 If you use AMPPred in your research, please cite:
 
 ```bibtex
-@misc{amppred2024,
+@misc{amppred,
   title={AMPPred: Antimicrobial Peptide Prediction Tool},
   author={Singh, Neeraj Kumar},
-  year={2024},
-  url={https://github.com/your-username/amppred}
+  year={2025},
+  url={https://github.com/neeraj1014/Antimicrobial-Peptide-Predictor}
 }
 ```
 
