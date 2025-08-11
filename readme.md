@@ -172,7 +172,7 @@ The core architecture (`BertForSequenceClassification`) consists of:
 
 ### Key Architecture Features
 
-- **Maximum Sequence Length**: 256 tokens (optimized for peptide sequences)
+- **Maximum Sequence Length**: 256 tokens 
 - **Hidden Size**: Configurable (typically 768 for base models)
 - **Attention Heads**: Multi-head attention for capturing sequence patterns
 - **Positional Encodings**: Support for absolute, relative, and rotary position embeddings
