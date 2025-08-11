@@ -1,6 +1,5 @@
 import argparse
 from amppred.utility.helper import load_model, get_predictions, read_fasta, check_model_names, get_codon_usage, write_prediction_files, filter_sequences
-import builtins
 from datetime import datetime
 import warnings
 import sys

@@ -1,6 +1,5 @@
 import argparse
 from amppred.utility.helper import check_if_model_exists, check_model_names, load_model, get_model_names, add_model_name
-import builtins
 from datetime import datetime
 import warnings
 import sys
