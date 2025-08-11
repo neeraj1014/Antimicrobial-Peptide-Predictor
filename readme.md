@@ -31,7 +31,7 @@ The training dataset combines comprehensive antimicrobial peptide collections wi
 
 ### Install from source
 
-# Direct installation :
+#### Direct installation :
 
 ```bash
 git clone https://github.com/neeraj1014/Antimicrobial-Peptide-Predictor.git
@@ -39,7 +39,7 @@ cd amppred
 pip install -e .
 ```
 
-# Conda installation : 
+#### Conda installation : 
 
 ```bash
 conda install neeraj1414::amppred
