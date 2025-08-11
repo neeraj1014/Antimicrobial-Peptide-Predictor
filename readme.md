@@ -90,7 +90,7 @@ Download and manage pre-trained models:
 amp-build --model Neeraj0101/AMP-Predict
 
 # Download custom model
-amp-build --model username/model-name
+amp-build --model huggingface_model [https://huggingface.co/Neeraj0101]
 
 # List downloaded models
 amp-build --list_models
