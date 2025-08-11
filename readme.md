@@ -89,7 +89,7 @@ AMPPred-run --input sequences.fasta --model your-model-name
 
 ### Command Line Interface
 
-#### Model Management (`amp-build`)
+#### Model Management (`AMPPred-build`)
 
 Download and manage pre-trained models:
 
