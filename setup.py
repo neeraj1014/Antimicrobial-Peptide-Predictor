@@ -15,8 +15,8 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'amp-run=amppred.run:main',
-            'amp-build=amppred.build:main',
+            'AMPPred-run=amppred.run:main',
+            'AMPPred-build=amppred.build:main',
         ],
     },
     python_requires=">=3.8",

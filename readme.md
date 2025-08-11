@@ -55,26 +55,26 @@ The tool automatically installs the following dependencies:
 
 ```bash
 # Download the default model
-amp-build --model Neeraj0101/AMP-Predict
+AMPPred-build --model Neeraj0101/AMP-Predict
 
 # List available models
-amp-build --list_models
+AMPPred-build --list_models
 ```
 
 ### 2. Run predictions
 
 ```bash
 # Basic usage with nucleotide sequences
-amp-run --input sequences.fasta
+AMPPred-run --input sequences.fasta
 
 # Use coding sequences directly (skip gene prediction)
-amp-run --input sequences.fasta --codon
+AMPPred-run --input sequences.fasta --codon
 
 # Generate FASTA file of predicted AMPs
-amp-run --input sequences.fasta --get_amp
+AMPPred-run --input sequences.fasta --get_amp
 
 # Use a specific model
-amp-run --input sequences.fasta --model your-model-name
+AMPPred-run --input sequences.fasta --model your-model-name
 ```
 
 ## Usage
@@ -87,21 +87,21 @@ Download and manage pre-trained models:
 
 ```bash
 # Download default model
-amp-build --model Neeraj0101/AMP-Predict
+AMPPred-build --model Neeraj0101/AMP-Predict
 
 # Download custom model
-amp-build --model huggingface_model [https://huggingface.co/Neeraj0101]
+AMPPred-build --model huggingface_model [https://huggingface.co/Neeraj0101]
 
 # List downloaded models
-amp-build --list_models
+AMPPred-build --list_models
 ```
 
-#### Prediction (`amp-run`)
+#### Prediction (`AMPPred-run`)
 
 Run AMP predictions on your sequences:
 
 ```bash
-amp-run --input <fasta_file> [OPTIONS]
+AMPPred-run --input <fasta_file> [OPTIONS]
 ```
 
 **Options:**
@@ -179,7 +179,7 @@ You can use custom models by:
 
 ### Common Issues
 
-1. **Model Not Found**: Run `amp-build --model <model-name>` to download the model first
+1. **Model Not Found**: Run `AMPPred-build --model <model-name>` to download the model first
 2. **CUDA Errors**: Ensure compatible PyTorch and CUDA versions
 3. **Memory Issues**: Reduce batch size or use CPU-only mode for very large datasets
 4. **No Sequences Found**: Check FASTA file format and sequence length requirements
