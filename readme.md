@@ -152,41 +152,7 @@ sequence_3,True,0.8901
 
 ## Model Architecture
 
-AMPPred uses a modified BERT architecture based on the [GENA-LM](https://github.com/AIRI-Institute/GENA_LM) framework, specifically adapted for antimicrobial peptide classification. The model architecture includes several key components:
-
-### BERT-based Sequence Classification
-
-The core architecture (`BertForSequenceClassification`) consists of:
-
-1. **Embedding Layer**: 
-   - Word embeddings for sequence tokens
-   - Positional embeddings (supports absolute, relative, and rotary embeddings)
-   - Token type embeddings for sequence classification
-
-2. **Multi-Head Self-Attention Mechanism**:
-   - Configurable number of attention heads
-   - Support for various positional encoding schemes
-   - Optional sparse attention for efficiency
-   - Cross-attention capability for encoder-decoder architectures
-
-3. **Transformer Encoder Layers**:
-   - Multiple stacked BERT layers with residual connections
-   - Layer normalization (supports both pre-norm and post-norm)
-   - Feed-forward networks with configurable activation functions
-   - Gradient checkpointing for memory efficiency
-
-4. **Classification Head**:
-   - Pooling layer that extracts [CLS] token representation
-   - Dropout for regularization
-   - Linear classifier for binary AMP prediction
-
-### Key Architecture Features
-
-- **Maximum Sequence Length**: 256 tokens (optimized for peptide sequences)
-- **Hidden Size**: Configurable (typically 768 for base models)
-- **Attention Heads**: Multi-head attention for capturing sequence patterns
-- **Positional Encodings**: Support for absolute, relative, and rotary position embeddings
-- **Sparse Attention**: Optional sparse attention patterns for computational efficiency
+AMPPred uses a modified BERT architecture based on the [GENA-LM](https://github.com/AIRI-Institute/GENA_LM) framework, specifically adapted for antimicrobial peptide classification. 
 
 ### Model Variants
 
