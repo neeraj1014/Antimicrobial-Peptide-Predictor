@@ -216,8 +216,6 @@ Contributions are welcome! Please feel free to submit issues, feature requests, 
 ## License
 Copyright 2025 Neeraj Kumar Singh
 
-This project is licensed under the Apache License 2.0.
-
 ## Citation
 
 If you use AMPPred in your research, please cite:
