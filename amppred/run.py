@@ -123,7 +123,7 @@ Examples:
     print("Checking model availability...")
     if not check_model_names(args.model):
         print(f"Model '{args.model}' not found in model registry.")
-        print("Please run 'amp-build' to download the model first.")
+        print("Please run 'AMPPred-build' to download the model first.")
         sys.exit(1)
     print(f"Model '{args.model}' is available")
     
