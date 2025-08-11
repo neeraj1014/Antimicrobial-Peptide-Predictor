@@ -153,6 +153,8 @@ def write_prediction_files(sequence_df, predicted_df, get_amp):
     amp_sequences = sequence_df.loc[sequence_df['prediction'] == True].reset_index(drop=True)
     
     # Write CSV with optimized parameters
+    predicted_df = predicted_df.loc[predicted_df['prediction'] == True]
+    predicted_df = predicted_df.drop(columns=['prediction'], inplace=True)
     predicted_df.to_csv(output_file_name, index=False, encoding='utf-8')
     
     print(f"Total AMP sequences found: {len(amp_sequences)}")
