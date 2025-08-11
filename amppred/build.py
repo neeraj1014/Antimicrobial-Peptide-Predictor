@@ -137,11 +137,11 @@ def optimize_environment_for_download():
 def display_model_list(model_list, tracker):
     """Display available models in a formatted table"""
     if not model_list:
-        print("📋 No models found in local registry")
+        print("No models found in local registry")
         print("   Run 'amppred-build --model <model_name>' to download models")
         return
     
-    print(f"📋 Available Models ({len(model_list)} total):")
+    print(f"Available Models ({len(model_list)} total):")
     print("-" * 80)
     print(f"{'Index':<6} {'Model Name':<40} {'Status':<15} {'Info'}")
     print("-" * 80)
@@ -173,10 +173,10 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  amppred-build --model Neeraj0101/AMP-Predict          # Download specific model
-  amppred-build --model username/custom-amp-model       # Download custom model
-  amppred-build --list_models                           # List available models
-  amppred-build --model local_model --force             # Force re-download
+  AMPPred-build --model Neeraj0101/AMP-Predict          # Download specific model
+  AMPPred-build --model username/custom-amp-model       # Download custom model
+  AMPPred-build --list_models                           # List available models
+  AMPPred-build --model local_model --force             # Force re-download
         """
     )
     
@@ -209,14 +209,6 @@ Examples:
     )
     
     args = parser.parse_args()
-    
-    # Setup enhanced logging with timestamps
-    original_print = builtins.print
-    def print_with_time(*print_args, **kwargs):
-        time_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        original_print(f"[{time_str}]", *print_args, **kwargs)
-    
-    builtins.print = print_with_time
     
     # Initialize progress tracker
     tracker = ModelBuildTracker()
@@ -345,7 +337,7 @@ Examples:
         # Final summary
         total_time = tracker.log_step("complete", "")
         print("\n" + "=" * 70)
-        print("🎉 Model Build Completed Successfully!")
+        print("Model Build Completed Successfully!")
         print("=" * 70)
         print(f"Build Summary:")
         print(f"   • Model: {model_name}")
@@ -354,7 +346,7 @@ Examples:
         print(f"   • Total time: {total_time:.2f} seconds")
         print(f"   • Status: Ready for prediction")
         print("\nUsage:")
-        print(f"   amppred --input sequences.fasta --model {model_name}")
+        print(f"   AMPPred --input sequences.fasta --model {model_name}")
         print("=" * 70)
         
     except KeyboardInterrupt:

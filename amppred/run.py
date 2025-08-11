@@ -106,19 +106,12 @@ Examples:
     
     args = parser.parse_args()
     
-    # Setup enhanced logging with timestamps
-    original_print = builtins.print
-    def print_with_time(*print_args, **kwargs):
-        time_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        original_print(f"[{time_str}]", *print_args, **kwargs)
-    
-    builtins.print = print_with_time
     
     # Initialize progress tracker
     tracker = ProgressTracker()
     
     print("=" * 60)
-    print("🧬 AMP Prediction Tool Started")
+    print("AMP Prediction Tool Started")
     print("=" * 60)
     
     # Validate inputs
