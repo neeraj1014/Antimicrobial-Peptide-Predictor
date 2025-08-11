@@ -22,7 +22,7 @@ AMPPred is a Python package for predicting antimicrobial peptides (AMPs) from nu
 ### Install from source
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/neeraj1014/Antimicrobial-Peptide-Predictor.git
 cd amppred
 pip install -e .
 ```
