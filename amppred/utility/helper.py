@@ -154,7 +154,7 @@ def write_prediction_files(sequence_df, predicted_df, get_amp):
     
     # Write CSV with optimized parameters
     predicted_df = predicted_df.loc[predicted_df['prediction'] == True]
-    predicted_df = predicted_df.drop(columns=['prediction'], inplace=True)
+    predicted_df = predicted_df.drop(columns=['prediction'])
     predicted_df = predicted_df.rename(columns={'probability': 'confidance'})
     predicted_df.to_csv(output_file_name, index=False, encoding='utf-8')
     
