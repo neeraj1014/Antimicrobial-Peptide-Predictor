@@ -96,7 +96,7 @@ def get_predictions(model, tokenizer, sequence_df, batch_size=32, device=None):
     predicted_df = pd.DataFrame({
         'header': headers,
         'prediction': all_predictions,
-        'confidance': all_probabilities
+        'probability': all_probabilities
     })
     
     # Use vectorized apply for classification
@@ -155,6 +155,7 @@ def write_prediction_files(sequence_df, predicted_df, get_amp):
     # Write CSV with optimized parameters
     predicted_df = predicted_df.loc[predicted_df['prediction'] == True]
     predicted_df = predicted_df.drop(columns=['prediction'], inplace=True)
+    df = df.rename(columns={'probability': 'confidance'})
     predicted_df.to_csv(output_file_name, index=False, encoding='utf-8')
     
     print(f"Total AMP sequences found: {len(amp_sequences)}")
