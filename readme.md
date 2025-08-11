@@ -117,6 +117,9 @@ AMPPred-run --input <fasta_file> [OPTIONS]
 - `--codon`: Use sequences directly without gene prediction
 - `--model`: Specify model name (default: `Neeraj0101/AMP-Predict`)
 - `--get_amp`: Generate FASTA file containing only predicted AMPs
+- `--filter_min` : Minimum sequence length for filtering (default: 10)
+- `--filter_max` : Maximum sequence length for filtering (default: 200)
+- `--batch_size` : Batch size for model inference (default: 32)
 
 ### Input Format
 
