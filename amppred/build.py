@@ -345,7 +345,7 @@ Examples:
         print(f"   • Total time: {total_time:.2f} seconds")
         print(f"   • Status: Ready for prediction")
         print("\nUsage:")
-        print(f"   AMPPred --input sequences.fasta --model {model_name}")
+        print(f"   AMPPred-run --input sequences.fasta --model {model_name}")
         print("=" * 70)
         
     except KeyboardInterrupt:

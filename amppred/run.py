@@ -129,6 +129,7 @@ Examples:
     
     sequence_df = None
     total_sequences = 0
+    coding_sequences = 0
     
     try:
         # Step 1: Read FASTA file
@@ -157,8 +158,7 @@ Examples:
             
             coding_sequences = len(sequence_df)
             tracker.log_step("codon_extraction", 
-                             f"Extracted {coding_sequences:,} coding sequences from {original_count:,} input sequences",
-                             f"Success rate: {(coding_sequences/original_count)*100:.1f}%")
+                             f"Extracted {coding_sequences:,} coding sequences from {original_count:,} input sequences")
         else:
             tracker.log_step("direct_processing", "Using sequences directly for prediction")
         
@@ -216,6 +216,7 @@ Examples:
         print(f"Processing Summary:")
         print(f"   • Total processing time: {total_time:.2f} seconds")
         print(f"   • Input sequences: {total_sequences:,}")
+        print(f"   • Coding sequences: {coding_sequences:,}")
         print(f"   • Sequences processed: {post_filter_count:,}")
         print(f"   • AMP predictions: {amp_predictions:,} ({amp_percentage:.1f}%)")
         print(f"   • Average confidence: {avg_confidence:.3f}")

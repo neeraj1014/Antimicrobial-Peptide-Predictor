@@ -188,8 +188,7 @@ def get_codon_usage(sequence_df):
             for i, gene in enumerate(genes):
                 cds_seq = gene.sequence()
                 coding_regions.append({
-                    "header": row['header'],
-                    "gene_id": f"{row['header']}_gene_{i+1}",
+                    "header": f"{row['header']}_gene_{i+1}",
                     "sequence": cds_seq,
                     "length": len(cds_seq),
                     "description": f"{row['description']}| gene_{i+1}"
