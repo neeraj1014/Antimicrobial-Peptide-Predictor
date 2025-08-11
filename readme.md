@@ -158,7 +158,6 @@ AMPPred uses a modified BERT architecture based on the [GENA-LM](https://github.
 
 The default model (`Neeraj0101/AMP-Predict`) is fine-tuned specifically for antimicrobial peptide prediction with:
 - Binary classification output (AMP vs non-AMP)
-- Optimized for protein/peptide sequences
 - Pre-trained on large genomic datasets using GENA-LM architecture
 
 ### Custom Models
@@ -184,12 +183,6 @@ You can use custom models by:
 2. **CUDA Errors**: Ensure compatible PyTorch and CUDA versions
 3. **Memory Issues**: Reduce batch size or use CPU-only mode for very large datasets
 4. **No Sequences Found**: Check FASTA file format and sequence length requirements
-
-### Error Messages
-
-- `Model {model_name} not found in model names`: Download the model using `amp-build`
-- `No sequences found`: Input file is empty or incorrectly formatted
-- `No AMP sequences found`: No sequences were classified as antimicrobial peptides
 
 ## API Usage
 
