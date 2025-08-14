@@ -6,9 +6,16 @@ AMPPred is a Python package for predicting antimicrobial peptides (AMPs) from nu
 
 The model has been trained on high-quality, curated datasets from established antimicrobial peptide databases:
 
-- **Positive Samples (AMPs)**: [APS Database (UNMC)](https://aps.unmc.edu/) & [dbAMP (CUHK)](https://awi.cuhk.edu.cn/dbAMP/)
-- **Negative Samples (Non-AMPs)**: NCBI protein sequences, cross-verified and validated
-- **Test Accuracy**: **99.05%** (0.990473)
+- **Training Data**
+  - ~30,000 AMP peptides (length > 10) sourced from [dbAMP (CUHK)](https://awi.cuhk.edu.cn/dbAMP/)
+  - Equal number (~30,000) of non-AMP peptides sourced from [NCBI Protein Sequences](https://www.ncbi.nlm.nih.gov/protein/)
+
+- **Test Data**
+  - AMPs from [APS Database (UNMC)](https://aps.unmc.edu/)
+  - Non-AMPs from [NCBI Protein Sequences](https://www.ncbi.nlm.nih.gov/protein/)
+  - All sequences cross-verified and validated
+
+- **Test Accuracy:** **99.05%** (0.990473)
 
 The training dataset combines comprehensive antimicrobial peptide collections with carefully selected and validated non-AMP sequences, ensuring robust classification performance across diverse sequence types.
 
